@@ -15,6 +15,8 @@ pip3 install -r requirements.pip
 Download a speech recognition model and unzip it as a folder named `model` in this project's directory.
 The speech recognition model can be found here: https://alphacephei.com/vosk/models
 
+You will need to create an API key that has GPT-4 enabled, and paste it in a file named "openai.key".
+
 ### Starting the app
 
 Start the app as follows:
