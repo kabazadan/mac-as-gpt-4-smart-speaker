@@ -47,7 +47,7 @@ def listen_for_audio(silent: bool = False, listen_seconds: int = 10) -> str:
     """
     try:
         with sr.Microphone() as audio_source:
-            r.adjust_for_ambient_noise(audio_source, duration=0.05)
+            r.adjust_for_ambient_noise(audio_source, duration=0.2)
             if not silent:
                 say_out_loud("listening")
             audio2 = r.listen(audio_source, timeout=10, phrase_time_limit=listen_seconds)
