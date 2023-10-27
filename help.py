@@ -37,7 +37,7 @@ gpt = Gpt()
 r = sr.Recognizer()
 
 
-def listen_for_audio(listen_seconds: int = 10) -> str:
+def listen_for_audio(silent: bool = False, listen_seconds: int = 10) -> str:
     """Listens for audio from the microphone
 
     Returns:
@@ -46,9 +46,11 @@ def listen_for_audio(listen_seconds: int = 10) -> str:
     try:
         with sr.Microphone() as audio_source:
             r.adjust_for_ambient_noise(audio_source, duration=0.05)
-            say_out_loud("listening")
+            if not silent:
+                say_out_loud("listening")
             audio2 = r.listen(audio_source, timeout=10, phrase_time_limit=listen_seconds)
-            say_out_loud("parsing")
+            if not silent:
+                say_out_loud("parsing")
             object = r.recognize_vosk(audio2).lower()
             text = json.loads(object)
             return text['text']
@@ -85,6 +87,9 @@ def say_out_loud(response: str) -> None:
 
 def main():
     triggered = False
+
+    say_out_loud("initializing")
+    listen_for_audio(silent=True, listen_seconds=1)
 
     while True:
         if not triggered:

@@ -17,6 +17,10 @@ The speech recognition model can be found here: https://alphacephei.com/vosk/mod
 
 You will need to create an API key that has GPT-4 enabled, and paste it in a file named "openai.key".
 
+You will also need to install pyaudio. I found the following Stack Overflow response helpful for this: https://stackoverflow.com/a/33851618
+
+
+
 ### Starting the app
 
 Start the app as follows:

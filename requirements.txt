@@ -1,4 +1,5 @@
 SpeechRecognition
+PyAudio
 mac-say
 openai
 vosk
