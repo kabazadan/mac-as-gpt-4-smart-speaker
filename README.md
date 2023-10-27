@@ -25,9 +25,9 @@ python3 help.py
 
 ### Speech commands
 
-#### 'help'
-
 The bot will say 'listening' when it is listening for you to say something. It will say 'parsing' to indicate it is trying to convert your speech to text.
+
+#### 'help'
 
 Once it is listening, the 'help' phrase triggers the app to start listening for a command. It lets you know that it's ready for a command by saying 'Yes?'.
 
