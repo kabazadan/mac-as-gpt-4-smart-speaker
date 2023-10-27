@@ -32,7 +32,9 @@ class Gpt:
     def reset(self):
         self.history = [{"role": "system", "content": self.system_prompt}]
 
+
 gpt = Gpt()
+
 
 r = sr.Recognizer()
 
@@ -75,6 +77,7 @@ def send_statement(voice_request: str) -> str:
     response = gpt.ask(voice_request)
     return response
 
+
 def say_out_loud(response: str) -> None:
     """Convert the text to speech
 
@@ -82,7 +85,6 @@ def say_out_loud(response: str) -> None:
         response (str): Text to read out loud
     """
     mac_say.say(response)
-
 
 
 def main():
