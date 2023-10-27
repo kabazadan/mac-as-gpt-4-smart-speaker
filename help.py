@@ -1,6 +1,6 @@
 # Licensed under Server Side Public License. Please see LICENSE file for more information.
 # Copyright 2023 (Spirit Wolf)
-
+# Inspired by https://github.com/DaveBben/chatgpt-smart-speaker
 
 import openai
 import speech_recognition as sr
