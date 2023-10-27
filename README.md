@@ -32,3 +32,11 @@ The bot will say 'listening' when it is listening for you to say something. It w
 Once it is listening, the 'help' phrase triggers the app to start listening for a command. It lets you know that it's ready for a command by saying 'Yes?'.
 
 Then, it will say 'thinking' to let you know that it is asking GPT-4 for a response. Once it has received a response, it will speak it to you.
+
+#### 'reset'
+
+By default, the app will keep a track of your conversation history. You can say 'reset' to delete the conversation you've had with it so far, to start a new one.
+
+#### 'stop'
+
+This will tell the app to exit.
