@@ -1,0 +1,4 @@
+SpeechRecognition
+mac-say
+openai
+vosk
